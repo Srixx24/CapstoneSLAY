@@ -32,26 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
     linkedinIcon.addEventListener('mouseleave', () => {
         changeCursorColor('#FF0000');
     });
-
-    // Gmail events
-    gmailIcon.addEventListener('click', function() {
-        window.open('mailto:jacolynlovins@gmail.com');
-    });
-    gmailIcon.addEventListener('mouseenter', () => {
-        changeCursorColor('#099631');
-    });
-    gmailIcon.addEventListener('mouseleave', () => {
-        changeCursorColor('#FF0000');
-    });
-
-    // Forest Scene events
-    toggleIcon.addEventListener('click', function() {
-        window.location.href = 'Scenes/forest.html';
-    });
-    toggleIcon.addEventListener('mouseenter', () => {
-        changeCursorColor('#099631');
-    });
-    toggleIcon.addEventListener('mouseleave', () => {
-        changeCursorColor('#FF0000');
-    });
 });
