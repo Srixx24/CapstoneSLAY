@@ -21,15 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
     githubIcon.addEventListener('mouseleave', () => {
         changeCursorColor('#FF0000');
     });
-
-    // Linkedin events
-    linkedinIcon.addEventListener('click', function() {
-        window.open('https://www.linkedin.com/in/jackielovins/', '_blank');
-    });
-    linkedinIcon.addEventListener('mouseenter', () => {
-        changeCursorColor('#099631');
-    });
-    linkedinIcon.addEventListener('mouseleave', () => {
-        changeCursorColor('#FF0000');
-    });
 });
