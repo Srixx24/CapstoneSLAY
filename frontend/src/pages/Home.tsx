@@ -21,20 +21,22 @@ function Home() {
   };
 
   return (
-    <div className="w-full min-h-screen p-4 flex flex-col items-center gap-4 bg-black">
+    <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
       {/* Demo iframe */}
-      <div className="w-screen h-[90vh] -mx-4">
-        <iframe
-          src="https://srixx24.github.io/WebXRBusinessCard/"
-          title="SLAY AR Demo"
-          className="w-full h-full"
-          allow="camera; microphone; fullscreen"
-          style={{ border: "none" }}
-        />
+      <div className="w-screen -mx-4">
+        <div className="h-[90vh]">
+          <iframe
+            src="https://srixx24.github.io/WebXRBusinessCard/"
+            title="SLAY AR Demo"
+            className="w-full h-full"
+            allow="camera; microphone; fullscreen"
+            style={{ border: "none" }}
+          />
+        </div>
       </div>
 
-      {/* First Row of Buttons - Custom styled */}
-      <div className="flex w-full">
+      {/* First Row of Buttons - Responsive width */}
+      <div className="flex w-screen -mx-4 md:mx-auto md:max-w-md">
         {["Scan", "Shade", "Liner", "Save"].map((label, index) => (
           <button
             key={index}
@@ -54,11 +56,11 @@ function Home() {
         ))}
       </div>
 
-      {/* Second Row of Buttons - Custom styled in pairs with border and rounded edges */}
-      <div className="flex gap-4 w-full">
+      {/* Second Row of Buttons - Responsive width with updated rounding */}
+      <div className="flex gap-4 w-full md:max-w-md md:mx-auto mt-4">
         <div className="flex flex-1">
           <button
-            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-md"
+            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-full"
             style={{
               backgroundColor: "#e3e0d1",
               color: "black",
@@ -72,7 +74,7 @@ function Home() {
             Gloss
           </button>
           <button
-            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-md"
+            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-full"
             style={{
               backgroundColor: "#e3e0d1",
               color: "black",
@@ -88,7 +90,7 @@ function Home() {
         </div>
         <div className="flex flex-1">
           <button
-            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-md"
+            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-full"
             style={{
               backgroundColor: "#e3e0d1",
               color: "black",
@@ -102,7 +104,7 @@ function Home() {
             Opacity
           </button>
           <button
-            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-md"
+            className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-full"
             style={{
               backgroundColor: "#e3e0d1",
               color: "black",
@@ -118,12 +120,12 @@ function Home() {
         </div>
       </div>
 
-      {/* Lipstick Shade Section */}
+      {/* Lipstick Shade Section - Responsive width */}
       <div className="w-full mt-6 text-center">
         <h2 className="text-white font-semibold text-lg tracking-wide mb-4">
           CHOOSE LIPSTICK SHADE
         </h2>
-        <div className="grid grid-cols-4 gap-4 place-items-center">
+        <div className="grid grid-cols-4 gap-4 place-items-center w-full md:max-w-md md:mx-auto">
           {[
             "#b9413e",
             "#c43337",
@@ -136,7 +138,7 @@ function Home() {
           ].map((color, index) => (
             <div
               key={index}
-              className="w-10 h-10 rounded-full"
+              className="w-20 h-20 rounded-full"
               style={{ backgroundColor: color }}
             ></div>
           ))}

@@ -10,7 +10,7 @@ function Navbar() {
     >
       {/* Logo */}
       <div className="flex items-center">
-        <img src={Logo} alt="SLAY Logo" className="h-10 w-auto" />
+        <img src={Logo} alt="SLAY Logo" className="h-16 w-auto" />
       </div>
 
       {/* Navigation Links */}
