@@ -6,13 +6,13 @@ import Demo from "./pages/Demo";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/demo" element={<Demo />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
