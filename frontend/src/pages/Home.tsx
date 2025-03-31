@@ -1,5 +1,9 @@
 // frontend/src/pages/Home.tsx
+import { useState } from "react";
+
 function Home() {
+  const [selectedShade, setSelectedShade] = useState<string | null>(null);
+
   const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.currentTarget.style.backgroundColor = "black";
     e.currentTarget.style.color = "white";
@@ -136,11 +140,14 @@ function Home() {
             "#882624",
             "#62221c",
           ].map((color, index) => (
-            <div
+            <button
               key={index}
-              className="w-20 h-20 rounded-full"
+              onClick={() => setSelectedShade(color)}
+              className={`w-20 h-20 rounded-full focus:outline-none transition-shadow duration-200 ${
+                selectedShade === color ? "ring-4 ring-white shadow-lg" : ""
+              }`}
               style={{ backgroundColor: color }}
-            ></div>
+            />
           ))}
         </div>
       </div>
