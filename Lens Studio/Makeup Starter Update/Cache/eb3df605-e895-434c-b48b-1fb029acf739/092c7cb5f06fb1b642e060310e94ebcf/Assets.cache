@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    030efc51-4fe8-459e-96d3-1f72ee5246a9: eb3df605-e895-434c-b48b-1fb029acf739/092c7cb5f06fb1b642e060310e94ebcf/Data/mask_eyeshadow_1.jpg
+  Assets:
+    - !<FileTexture/030efc51-4fe8-459e-96d3-1f72ee5246a9>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 624
+        Height: 220
+  SourceHash: 092c7cb5f06fb1b642e060310e94ebcf
+  FileHash: 50b3f6a65ea15c9b7a4107eebe6caf98
+  NativePackageItems:
+    []

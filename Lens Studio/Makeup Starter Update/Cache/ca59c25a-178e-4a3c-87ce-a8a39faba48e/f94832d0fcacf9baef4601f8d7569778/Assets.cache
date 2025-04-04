@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    fd8a099e-4f0b-4e46-8def-b2b1b5374912: ca59c25a-178e-4a3c-87ce-a8a39faba48e/f94832d0fcacf9baef4601f8d7569778/Data/mask_eyelashes.jpg
+  Assets:
+    - !<FileTexture/fd8a099e-4f0b-4e46-8def-b2b1b5374912>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 624
+        Height: 212
+  SourceHash: f94832d0fcacf9baef4601f8d7569778
+  FileHash: 8fa3a856ae5acbd31cd0b35ff35dedb9
+  NativePackageItems:
+    []

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    c9c9f133-79d1-411d-b522-daa25121788d: 40c2a76e-fadc-45e3-8e5b-17564e08441c/3e5512fab2c08b0127f688a57761c785/Data/mask_eyebrows.jpg
+  Assets:
+    - !<FileTexture/c9c9f133-79d1-411d-b522-daa25121788d>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 624
+        Height: 168
+  SourceHash: 3e5512fab2c08b0127f688a57761c785
+  FileHash: 0d2e19f9da286a78c2d5f0957f477fbc
+  NativePackageItems:
+    []

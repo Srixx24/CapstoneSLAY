@@ -1,0 +1,32 @@
+- !<NativePackageDescriptor/ac1c5210-4654-4132-9a43-6e7d7634132a>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 8
+    patch: 0
+    build: 25040219
+    type: Unset
+  Description: Pin cutstom mesh to face mesh Learn more in the Face Mesh asset guide
+  SvgIcon: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 56
+  ExportUid: e42906e9-a9b0-4ec6-a360-533980133eab
+  ComponentUid: 5048132d-bf80-4dcb-8a4f-6dae6bde6040
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
+  coreVersion: 305
+  clientVersion: 13.340000

@@ -1,0 +1,211 @@
+- !<AssetImportMetadata/74e088f9-ce27-42a1-af6e-fa8e1aaba6b6>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 62f5744d-6c2f-43cd-bec6-a976ea3c2304
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 62f5744d-6c2f-43cd-bec6-a976ea3c2304
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 6bb76e37-93be-45e3-9378-b2348b62ee7c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/190393f2-36e5-4681-8502-b162fb0c7573>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a99ed58a-62d3-4ab6-b036-5c62fc44fd78
+  Mesh: !<reference> ae958627-a995-4f94-a6b1-5576d5fa0dc5
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/39d10d7c-9272-4559-a7de-03bb0401360a>
+  PrefabRemaps:
+    []
+  Name: Pin To Mesh Left
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 3.150000, y: 8.858600, z: 9.846785}
+    rotation: {x: 90.000000, y: 16.109228, z: 0.000000}
+    scale: {x: 0.050000, y: 0.050000, z: 0.050000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 85b6f83c-01ff-4d35-9576-4f3fddf645b8
+  Components:
+    - !<own> c72cc75f-9eeb-4c98-beb0-c894261c53c6
+- !<SceneObject/44cae16c-4d39-476d-9378-bc68f72b181c>
+  PrefabRemaps:
+    []
+  Name: Pin To Face Mesh__PUT_UNDER_HEAD_BINDING
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b5452d12-00fd-4e20-968d-58fbc4378f25
+    - !<own> 39d10d7c-9272-4559-a7de-03bb0401360a
+    - !<own> 770b08a2-dba0-4060-847c-aae360294e8e
+  Components:
+    []
+- !<RenderMeshVisual/58952ebf-9a3a-4e7e-af50-7d4d3f9ece52>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b09d640c-0735-485f-84f0-da0a0d4cd7d1
+  Mesh: !<reference> 98d35058-64ee-423b-b1e8-4ca5d00e1495
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<PinToMeshComponent/6a5df1b0-f7a0-4683-b9b4-da13b016e085>
+  PrefabRemaps:
+    []
+  Name: Pin To Mesh
+  Enabled: true
+  Target: !<reference> 190393f2-36e5-4681-8502-b162fb0c7573
+  PinUV: {x: 0.346059, y: 0.622774}
+  OffsetPosition: {x: 0.000000, y: 0.000000, z: 0.000000}
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+  UseVertexNormal: true
+  Orientation: PositionAndDirection
+- !<ObjectPrefabAssetData/6bb76e37-93be-45e3-9378-b2348b62ee7c>
+  SourceRemaps:
+    - 17fbd109-0ea6-4fde-8ca0-d11f7ae2388f: 190393f2-36e5-4681-8502-b162fb0c7573
+    - 1a22ba93-4fc6-41d8-bb0f-038502ccc3ef: 910a1cc1-6bca-4c99-9659-7bb13baf447b
+    - 27750e4c-c285-4311-a8bd-a9e3591df6d1: b5452d12-00fd-4e20-968d-58fbc4378f25
+    - 31fe1021-3c8a-4c08-8c66-ba9dc977896c: da83b592-4df8-49b8-b263-31333980a3e2
+    - 4be38fcb-8f5c-4b26-9493-a07c253c3e0e: c72cc75f-9eeb-4c98-beb0-c894261c53c6
+    - 4f508579-255f-4cab-b9fe-0bcf41d884f4: 6a5df1b0-f7a0-4683-b9b4-da13b016e085
+    - 5c23b719-2715-47c9-84e1-690e9075ad85: 39d10d7c-9272-4559-a7de-03bb0401360a
+    - 62f5744d-6c2f-43cd-bec6-a976ea3c2304: 88edc517-b1d8-4982-8ee1-bfd4afa45c7b
+    - 6c5f8cf6-6340-4cc2-aa44-0918d89b0be9: 58952ebf-9a3a-4e7e-af50-7d4d3f9ece52
+    - 7f7ac35a-0001-4fce-bcd7-393c4640d593: 85b6f83c-01ff-4d35-9576-4f3fddf645b8
+    - 8548c81c-cf1b-4806-a47d-f8ca37bebefb: 770b08a2-dba0-4060-847c-aae360294e8e
+    - 8f6cb448-09b2-4dce-a2ca-b0510709abcf: 44cae16c-4d39-476d-9378-bc68f72b181c
+  SourceState: !<own> 88edc517-b1d8-4982-8ee1-bfd4afa45c7b
+- !<SceneObject/770b08a2-dba0-4060-847c-aae360294e8e>
+  PrefabRemaps:
+    []
+  Name: Pin To Mesh Right
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 3.150000, y: 8.858600, z: 9.846785}
+    rotation: {x: 90.000000, y: 16.109228, z: 0.000000}
+    scale: {x: 0.050000, y: 0.050000, z: 0.050000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> da83b592-4df8-49b8-b263-31333980a3e2
+  Components:
+    - !<own> 6a5df1b0-f7a0-4683-b9b4-da13b016e085
+- !<SceneObject/85b6f83c-01ff-4d35-9576-4f3fddf645b8>
+  PrefabRemaps:
+    []
+  Name: Watermelon_L
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 4.000000, y: 30.000000, z: -4.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: -0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 58952ebf-9a3a-4e7e-af50-7d4d3f9ece52
+- !<ObjectPrefab/88edc517-b1d8-4982-8ee1-bfd4afa45c7b>
+  PackagePath: Pin To Face Mesh__PUT_UNDER_HEAD_BINDING
+  objects:
+    - !<own> 44cae16c-4d39-476d-9378-bc68f72b181c
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/910a1cc1-6bca-4c99-9659-7bb13baf447b>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b09d640c-0735-485f-84f0-da0a0d4cd7d1
+  Mesh: !<reference> 98d35058-64ee-423b-b1e8-4ca5d00e1495
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b5452d12-00fd-4e20-968d-58fbc4378f25>
+  PrefabRemaps:
+    []
+  Name: Face Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 190393f2-36e5-4681-8502-b162fb0c7573
+- !<PinToMeshComponent/c72cc75f-9eeb-4c98-beb0-c894261c53c6>
+  PrefabRemaps:
+    []
+  Name: Pin To Mesh
+  Enabled: true
+  Target: !<reference> 190393f2-36e5-4681-8502-b162fb0c7573
+  PinUV: {x: 0.639121, y: 0.623807}
+  OffsetPosition: {x: 0.000000, y: 0.000000, z: 0.000000}
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+  UseVertexNormal: true
+  Orientation: PositionAndDirection
+- !<SceneObject/da83b592-4df8-49b8-b263-31333980a3e2>
+  PrefabRemaps:
+    []
+  Name: Watermelon_R
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 4.000000, y: 30.000000, z: -4.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: -0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 910a1cc1-6bca-4c99-9659-7bb13baf447b

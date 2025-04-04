@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    5b4eefc2-32ed-43ff-9af5-03e7ecd3fe0b: 560f918d-2652-44e3-99bb-5688af175ec3/cf4e9f72292c7541e1508e247ecdb031/Data/watermelon_normal.png
+  Assets:
+    - !<FileTexture/5b4eefc2-32ed-43ff-9af5-03e7ecd3fe0b>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 512
+  SourceHash: cf4e9f72292c7541e1508e247ecdb031
+  FileHash: 2f018f00deaeaf1101fc1d002359e640
+  NativePackageItems:
+    []

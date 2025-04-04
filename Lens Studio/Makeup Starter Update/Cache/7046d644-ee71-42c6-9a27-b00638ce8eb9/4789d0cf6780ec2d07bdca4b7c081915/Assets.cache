@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    e9cb2c65-9a8e-4802-b123-c9a99ec264a3: 7046d644-ee71-42c6-9a27-b00638ce8eb9/4789d0cf6780ec2d07bdca4b7c081915/Data/mask_eyeliner.jpg
+  Assets:
+    - !<FileTexture/e9cb2c65-9a8e-4802-b123-c9a99ec264a3>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 624
+        Height: 188
+  SourceHash: 4789d0cf6780ec2d07bdca4b7c081915
+  FileHash: 042368a8c37ec49dfccdd3fe441261d5
+  NativePackageItems:
+    []

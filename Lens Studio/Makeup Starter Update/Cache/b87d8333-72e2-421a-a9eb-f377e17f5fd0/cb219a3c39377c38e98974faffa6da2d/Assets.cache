@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    cf893920-3985-4b80-9d41-3dad77b42db5: b87d8333-72e2-421a-a9eb-f377e17f5fd0/cb219a3c39377c38e98974faffa6da2d/Data/video_normal.png
+  Assets:
+    - !<FileTexture/cf893920-3985-4b80-9d41-3dad77b42db5>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 1024
+        Height: 1024
+  SourceHash: cb219a3c39377c38e98974faffa6da2d
+  FileHash: 9c074293c826f6fc63d3fef8943de471
+  NativePackageItems:
+    []

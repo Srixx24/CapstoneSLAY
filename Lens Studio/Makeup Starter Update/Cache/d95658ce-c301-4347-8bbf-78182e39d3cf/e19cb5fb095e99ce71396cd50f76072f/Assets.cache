@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    7d274ded-cbae-406d-bf4c-cae493b012f1: d95658ce-c301-4347-8bbf-78182e39d3cf/e19cb5fb095e99ce71396cd50f76072f/Data/mask_lips_opened.jpg
+  Assets:
+    - !<FileTexture/7d274ded-cbae-406d-bf4c-cae493b012f1>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 231
+        Height: 134
+  SourceHash: e19cb5fb095e99ce71396cd50f76072f
+  FileHash: 249c1ce358f98f5cf639e5366728cee5
+  NativePackageItems:
+    []

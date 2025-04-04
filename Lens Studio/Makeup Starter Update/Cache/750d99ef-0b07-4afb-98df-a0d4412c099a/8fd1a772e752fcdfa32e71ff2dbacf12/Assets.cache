@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    0ee8bf68-5926-4e90-918e-6afbeece5b81: 750d99ef-0b07-4afb-98df-a0d4412c099a/8fd1a772e752fcdfa32e71ff2dbacf12/Data/mask_lips_closed.jpg
+  Assets:
+    - !<FileTexture/0ee8bf68-5926-4e90-918e-6afbeece5b81>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 231
+        Height: 134
+  SourceHash: 8fd1a772e752fcdfa32e71ff2dbacf12
+  FileHash: 32406ecbc52843d92377d4e5f09e1e76
+  NativePackageItems:
+    []
