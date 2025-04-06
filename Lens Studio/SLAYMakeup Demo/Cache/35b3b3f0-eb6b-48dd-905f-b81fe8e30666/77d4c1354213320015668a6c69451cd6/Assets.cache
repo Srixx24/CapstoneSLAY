@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    8b1684bd-b0dc-4e31-9ee0-006c4527c8ff: 35b3b3f0-eb6b-48dd-905f-b81fe8e30666/77d4c1354213320015668a6c69451cd6/Data/headband_half.pvr
+  Assets:
+    - !<FileTexture/8b1684bd-b0dc-4e31-9ee0-006c4527c8ff>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 625
+        Height: 144
+  SourceHash: 77d4c1354213320015668a6c69451cd6
+  FileHash: 09044c893508a0abc7db04cb502351d7
+  NativePackageItems:
+    []

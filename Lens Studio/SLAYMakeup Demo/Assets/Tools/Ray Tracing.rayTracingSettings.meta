@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/8e25d199-cad9-4938-9014-36639dbf0c44>
+  ImportedAssetIds:
+    RayTracingSettings: !<reference> 56910aa8-acdf-4de6-8333-9ef5569bc4fb
+  ImporterName: RayTracingSettingsImporter
+  PrimaryAsset: !<reference> 56910aa8-acdf-4de6-8333-9ef5569bc4fb
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

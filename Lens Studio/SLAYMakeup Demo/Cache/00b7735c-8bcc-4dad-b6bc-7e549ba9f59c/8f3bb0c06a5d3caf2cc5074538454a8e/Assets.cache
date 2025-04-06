@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    516710d7-ef80-4dc1-ba23-caa2bef695f3: 00b7735c-8bcc-4dad-b6bc-7e549ba9f59c/8f3bb0c06a5d3caf2cc5074538454a8e/Data/pink_lens.pvr
+  Assets:
+    - !<FileTexture/516710d7-ef80-4dc1-ba23-caa2bef695f3>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 565
+        Height: 211
+  SourceHash: 8f3bb0c06a5d3caf2cc5074538454a8e
+  FileHash: 9336be2a89488959743f44b683c26d0c
+  NativePackageItems:
+    []

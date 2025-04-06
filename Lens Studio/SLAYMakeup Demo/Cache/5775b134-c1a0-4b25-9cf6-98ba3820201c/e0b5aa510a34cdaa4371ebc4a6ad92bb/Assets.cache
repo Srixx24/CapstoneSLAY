@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    01e96d4d-7a35-46e2-b846-6b5f9a798e17: 5775b134-c1a0-4b25-9cf6-98ba3820201c/e0b5aa510a34cdaa4371ebc4a6ad92bb/Data/Slider.png
+  Assets:
+    - !<FileTexture/01e96d4d-7a35-46e2-b846-6b5f9a798e17>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 808
+        Height: 92
+  SourceHash: e0b5aa510a34cdaa4371ebc4a6ad92bb
+  FileHash: 4b4672f658fe80b9a24045dfd012e66a
+  NativePackageItems:
+    []

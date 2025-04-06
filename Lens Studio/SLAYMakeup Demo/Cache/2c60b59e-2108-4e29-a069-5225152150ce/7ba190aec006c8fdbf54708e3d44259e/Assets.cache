@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    a537dc03-9459-4016-9f05-c5066fe1ae15: fc52cadc-877f-4a25-8a07-7b9cadc3759d/7ba190aec006c8fdbf54708e3d44259e/Data/Eyelid_Top.mesh
+  Assets:
+    - !<FileMesh/a537dc03-9459-4016-9f05-c5066fe1ae15>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 160
+        Vertices: 165
+        Blendshapes:
+          - Pose_0
+        Joints: 0
+        AabbSize: {x: 200.000000, y: 100.000000, z: 10.716829}
+  SourceHash: 7ba190aec006c8fdbf54708e3d44259e
+  FileHash: f4701fa4f2b96e4d26c129dda39b0624
+  NativePackageItems:
+    []

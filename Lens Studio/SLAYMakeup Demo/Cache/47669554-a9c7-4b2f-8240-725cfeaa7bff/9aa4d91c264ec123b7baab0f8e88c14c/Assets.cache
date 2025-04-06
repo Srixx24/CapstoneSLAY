@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    9e96894c-9484-495f-b244-4017ef1e4850: 47669554-a9c7-4b2f-8240-725cfeaa7bff/9aa4d91c264ec123b7baab0f8e88c14c/Data/headband_kitty.pvr
+  Assets:
+    - !<FileTexture/9e96894c-9484-495f-b244-4017ef1e4850>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 610
+        Height: 222
+  SourceHash: 9aa4d91c264ec123b7baab0f8e88c14c
+  FileHash: de067c4d82dd09653327bacc62f34c7f
+  NativePackageItems:
+    []

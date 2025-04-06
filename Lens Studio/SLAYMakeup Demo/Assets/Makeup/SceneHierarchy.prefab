@@ -1,0 +1,192 @@
+- !<ObjectPrefab/125ed0eb-ea8e-4887-be46-644d6bcc34fd>
+  PackagePath: ""
+  objects:
+    - !<own> 94046ca3-5414-4572-948b-cfb135158b60
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/19f809fb-2725-4521-a8ad-77a9e8a69a88>
+  PrefabRemaps:
+    []
+  Name: Face Retouch
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1c76765b-52a6-48e9-9ab1-50879136876a
+- !<RetouchVisual/1c76765b-52a6-48e9-9ab1-50879136876a>
+  PrefabRemaps:
+    []
+  Name: Face Retouch
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  FaceIndex: 0
+  AutoMode: true
+  AutoType: MlRetouch
+  SoftSkinEnabled: true
+  SoftSkinIntensity: 1.000000
+  TeethWhiteningEnabled: true
+  TeethWhiteningIntensity: 0.400000
+  EyeSharpeningEnabled: true
+  EyeSharpeningIntensity: 0.700000
+  EyeWhiteningEnabled: true
+  EyeWhiteningIntensity: 0.300000
+  TextureCoordinates:
+    - {x: 0.042176, y: 0.487153}
+    - {x: 0.050034, y: 0.560045}
+    - {x: 0.068312, y: 0.620651}
+    - {x: 0.094898, y: 0.698092}
+    - {x: 0.137781, y: 0.771647}
+    - {x: 0.196259, y: 0.823793}
+    - {x: 0.272374, y: 0.864801}
+    - {x: 0.360761, y: 0.906846}
+    - {x: 0.505500, y: 0.936027}
+    - {x: 0.651094, y: 0.906202}
+    - {x: 0.740179, y: 0.863246}
+    - {x: 0.815244, y: 0.821252}
+    - {x: 0.871161, y: 0.768013}
+    - {x: 0.911349, y: 0.693912}
+    - {x: 0.935981, y: 0.617186}
+    - {x: 0.953375, y: 0.557976}
+    - {x: 0.961071, y: 0.486209}
+    - {x: 0.141550, y: 0.425154}
+    - {x: 0.190398, y: 0.388542}
+    - {x: 0.261150, y: 0.378964}
+    - {x: 0.332630, y: 0.388794}
+    - {x: 0.398767, y: 0.412476}
+    - {x: 0.600716, y: 0.412226}
+    - {x: 0.668048, y: 0.388749}
+    - {x: 0.740687, y: 0.379184}
+    - {x: 0.812402, y: 0.389274}
+    - {x: 0.861802, y: 0.426481}
+    - {x: 0.500528, y: 0.449956}
+    - {x: 0.500177, y: 0.495004}
+    - {x: 0.499794, y: 0.522222}
+    - {x: 0.499353, y: 0.558485}
+    - {x: 0.444626, y: 0.599369}
+    - {x: 0.471634, y: 0.604367}
+    - {x: 0.499352, y: 0.609457}
+    - {x: 0.527251, y: 0.604827}
+    - {x: 0.554210, y: 0.600117}
+    - {x: 0.157412, y: 0.477612}
+    - {x: 0.217647, y: 0.434494}
+    - {x: 0.324231, y: 0.435234}
+    - {x: 0.403611, y: 0.471437}
+    - {x: 0.328043, y: 0.500339}
+    - {x: 0.220157, y: 0.500829}
+    - {x: 0.594118, y: 0.470978}
+    - {x: 0.674431, y: 0.434494}
+    - {x: 0.780835, y: 0.434367}
+    - {x: 0.840301, y: 0.477583}
+    - {x: 0.777087, y: 0.500280}
+    - {x: 0.669412, y: 0.499171}
+    - {x: 0.328079, y: 0.771144}
+    - {x: 0.415048, y: 0.742348}
+    - {x: 0.457629, y: 0.737240}
+    - {x: 0.497949, y: 0.748319}
+    - {x: 0.538753, y: 0.737499}
+    - {x: 0.581569, y: 0.742952}
+    - {x: 0.668832, y: 0.771672}
+    - {x: 0.597583, y: 0.795555}
+    - {x: 0.559266, y: 0.803216}
+    - {x: 0.497426, y: 0.810945}
+    - {x: 0.436000, y: 0.802653}
+    - {x: 0.398353, y: 0.794362}
+    - {x: 0.353177, y: 0.771144}
+    - {x: 0.463608, y: 0.754561}
+    - {x: 0.498001, y: 0.759536}
+    - {x: 0.532835, y: 0.754821}
+    - {x: 0.642564, y: 0.771706}
+    - {x: 0.533882, y: 0.791045}
+    - {x: 0.497687, y: 0.791045}
+    - {x: 0.461907, y: 0.790932}
+    - {x: 0.050865, y: 0.172151}
+    - {x: 0.205652, y: 0.073161}
+    - {x: 0.339052, y: 0.029951}
+    - {x: 0.500065, y: 0.021309}
+    - {x: 0.662180, y: 0.029672}
+    - {x: 0.797056, y: 0.072717}
+    - {x: 0.951792, y: 0.171655}
+- !<PinToMeshComponent/67972c76-f1fe-4fcf-8f46-ad2ca97ca5d7>
+  PrefabRemaps:
+    []
+  Name: Pin to Mesh
+  Enabled: true
+  Target: !<reference> a425a59e-710e-4b40-af7b-cbacc9fbcfc2
+  PinUV: {x: 0.490000, y: 0.360000}
+  OffsetPosition: {x: 0.000000, y: 0.000000, z: 0.000000}
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+  UseVertexNormal: true
+  Orientation: PositionAndDirection
+- !<SceneObject/94046ca3-5414-4572-948b-cfb135158b60>
+  PrefabRemaps:
+    []
+  Name: First Face
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b2bf3933-c684-48a2-abed-a3b857ea1b43
+    - !<own> 19f809fb-2725-4521-a8ad-77a9e8a69a88
+  Components:
+    []
+- !<ScriptComponent/94570126-efb4-449d-a43a-00cb50d458b5>
+  PrefabRemaps:
+    []
+  Name: Facial Features Segmentation
+  Enabled: true
+  ScriptAsset: !<reference> 635cd89e-1071-4af9-b052-40c54f7f551a
+  ScriptInputsDefault:
+    backgr: true
+    beard: true
+    brows: true
+    ears: true
+    invertMask: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      backgr: false
+      beard: false
+      brows: false
+      ears: false
+      eyes: true
+      face_skin: true
+      lips: true
+      invertMask: false
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b2bf3933-c684-48a2-abed-a3b857ea1b43>
+  PrefabRemaps:
+    []
+  Name: Facial Features Segmentation
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 94570126-efb4-449d-a43a-00cb50d458b5
+    - !<own> 67972c76-f1fe-4fcf-8f46-ad2ca97ca5d7

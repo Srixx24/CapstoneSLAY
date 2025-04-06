@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    98d35058-64ee-423b-b1e8-4ca5d00e1495: 44346fbf-6bf4-40bf-8538-e24422603f1d/eec7bfaef2690e25c8fc30943d74c16e/Data/Watermelon.mesh
+  Assets:
+    - !<FileMesh/98d35058-64ee-423b-b1e8-4ca5d00e1495>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 352
+        Vertices: 255
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 100.000000, y: 23.452370, z: 100.000000}
+  SourceHash: eec7bfaef2690e25c8fc30943d74c16e
+  FileHash: e3ff58cca69d086a60fcc4b783c64043
+  NativePackageItems:
+    []

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    4d5cc883-cbe2-460e-b281-cc2ba38566f0: 4863346e-b1ca-4e85-8be6-ff0b730ad09b/2052c3d1cdca4d9f125762620daa8639/Data/mask_lip_gloss.jpg
+  Assets:
+    - !<FileTexture/4d5cc883-cbe2-460e-b281-cc2ba38566f0>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 624
+        Height: 208
+  SourceHash: 2052c3d1cdca4d9f125762620daa8639
+  FileHash: d590c0b9525a05dcc901ac5957a3a335
+  NativePackageItems:
+    []

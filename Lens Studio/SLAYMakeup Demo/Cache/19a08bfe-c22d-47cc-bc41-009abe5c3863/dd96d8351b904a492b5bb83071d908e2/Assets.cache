@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    c18aec80-9ff0-4f9e-bb37-d3123a2b6f1e: 19a08bfe-c22d-47cc-bc41-009abe5c3863/dd96d8351b904a492b5bb83071d908e2/Data/Lipstick.jpg
+  Assets:
+    - !<FileTexture/c18aec80-9ff0-4f9e-bb37-d3123a2b6f1e>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 378
+        Height: 512
+  SourceHash: dd96d8351b904a492b5bb83071d908e2
+  FileHash: b51ea0e0b05a8f2b1ff2554517d5e4e1
+  NativePackageItems:
+    []

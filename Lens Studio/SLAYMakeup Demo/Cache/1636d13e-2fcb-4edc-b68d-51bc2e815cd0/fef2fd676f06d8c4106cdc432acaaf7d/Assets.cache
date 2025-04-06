@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    85d37b64-8b36-4b35-b1f6-9672a5edda4f: 1636d13e-2fcb-4edc-b68d-51bc2e815cd0/fef2fd676f06d8c4106cdc432acaaf7d/Data/crown.pvr
+  Assets:
+    - !<FileTexture/85d37b64-8b36-4b35-b1f6-9672a5edda4f>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 568
+        Height: 443
+  SourceHash: fef2fd676f06d8c4106cdc432acaaf7d
+  FileHash: 3f89b505309945e2e5e0c6ff1bf06118
+  NativePackageItems:
+    []

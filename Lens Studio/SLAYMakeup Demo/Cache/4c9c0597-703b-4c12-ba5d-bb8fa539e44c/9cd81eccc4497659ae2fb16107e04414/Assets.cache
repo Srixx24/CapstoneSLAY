@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    6d633c1f-306b-42f6-b83f-d683674346a0: 4c9c0597-703b-4c12-ba5d-bb8fa539e44c/9cd81eccc4497659ae2fb16107e04414/Data/star_lens.pvr
+  Assets:
+    - !<FileTexture/6d633c1f-306b-42f6-b83f-d683674346a0>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 548
+        Height: 214
+  SourceHash: 9cd81eccc4497659ae2fb16107e04414
+  FileHash: 7d54f027d647016c2cf1d4df6f59836e
+  NativePackageItems:
+    []

@@ -1,0 +1,196 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: 8244cf33a6bc901b83dd86b46bd7aac2
+  FileHash: e6e10a711eb3896e9def3cf22c013e0e
+  NativePackageItems:
+    - !<own> 8313baea-6eb4-4bc1-a99a-67e003f290d7
+    - !<own> d16872ef-9ee5-4691-82c0-a0c749adf718
+    - !<own> 317cfbf5-60f1-402c-a47c-4c45510529f5
+    - !<own> e5462e93-ac2e-4058-b1e0-d2a937083425
+- !<SceneObject/15bd1cb4-03ed-404a-a606-5ddcb32210a8>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a503c1cf-4d2c-4fa1-adaf-dbcf1aff3333
+- !<ScriptAssetData/2bd5a2b5-d988-4371-9124-f1ebde80e370>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c0d2c3ec-4b65-4763-82b6-a8bba0447e6e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/317cfbf5-60f1-402c-a47c-4c45510529f5>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 512b7d68-3b57-4142-a759-032c150a612a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 512b7d68-3b57-4142-a759-032c150a612a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 2bd5a2b5-d988-4371-9124-f1ebde80e370
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefab/4035e24e-0d14-4afe-82ca-b5558d4e0bad>
+  PackagePath: ""
+  objects:
+    - !<own> 15bd1cb4-03ed-404a-a606-5ddcb32210a8
+  LazyLoading: false
+  RetainAssets: true
+- !<AssetImportMetadata/8313baea-6eb4-4bc1-a99a-67e003f290d7>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> f812a9c9-f942-407e-985f-0c1705c35409
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> f812a9c9-f942-407e-985f-0c1705c35409
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> ac5eaad3-05f4-472a-b356-34cf79817b2c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<Head/a503c1cf-4d2c-4fa1-adaf-dbcf1aff3333>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: HeadCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/ac5eaad3-05f4-472a-b356-34cf79817b2c>
+  SvgIcon: ""
+  Description: |-
+    A collection of face events that can be used by other scripts
+    
+    Events:
+    onFaceFound
+    onFaceLost
+    onMouthOpened
+    onMouthClosed
+    onSmileStarted
+    onSmileFinished
+    onKissStarted
+    onKissFinished
+    onBrowsRaised
+    onBrowsLowered
+    onBrowsNormal
+    onTiltLeft
+    onTiltRight
+    onTiltCenter
+    
+    Inputs:
+    getHeadAngle 
+    getNosePosition2D
+    getLeftEyePosition2D
+    getRightEyePosition2D 
+    getMouthPosition2D 
+    getHeadCenterPosition2D 
+    getForeheadPosition2D 
+  InternalVersion: 19
+  VersionMajor: 2
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: cb9b2d4b-a4c0-400d-9508-9a2f667550f6
+  ExportUid: 19febe34-cfbd-4efa-8955-d00bebfd8ca9
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    enableHint: false
+    headPrefab: true
+    headTiltThresholdAngle: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - enableHint: true
+      headTiltAngle: !<float> 8.000000
+      headPrefab: !<reference.ObjectPrefab> 4dd77b11-cd0d-4f64-b6c5-704cc5cfc9de
+      headTiltThresholdAngle: !<float> 10.000000
+  ScriptTypes:
+    -
+      {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/c57a8f8f-1e36-4b64-9a9e-a34f0b2f7270>
+  SourceRemaps:
+    - 30bdff25-b156-4a41-a3d5-302b9c6a514a: 15bd1cb4-03ed-404a-a606-5ddcb32210a8
+    - 4dd77b11-cd0d-4f64-b6c5-704cc5cfc9de: 4035e24e-0d14-4afe-82ca-b5558d4e0bad
+    - 946a65bd-4f49-4562-8646-902517629c0b: a503c1cf-4d2c-4fa1-adaf-dbcf1aff3333
+  SourceState: !<own> 4035e24e-0d14-4afe-82ca-b5558d4e0bad
+- !<AssetImportMetadata/d16872ef-9ee5-4691-82c0-a0c749adf718>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 4dd77b11-cd0d-4f64-b6c5-704cc5cfc9de
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 4dd77b11-cd0d-4f64-b6c5-704cc5cfc9de
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> c57a8f8f-1e36-4b64-9a9e-a34f0b2f7270
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/e5462e93-ac2e-4058-b1e0-d2a937083425>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 322378b8-899c-4d33-a7d7-248173353738
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 322378b8-899c-4d33-a7d7-248173353738
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

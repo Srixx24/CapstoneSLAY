@@ -1,0 +1,19 @@
+- !<RayTracingSettings/56910aa8-acdf-4de6-8333-9ef5569bc4fb>
+  PackagePath: ""
+  Enabled: false
+  Reflections:
+    enabled: true
+    rpp: 1.000000
+    range: 0.200000
+  IndirectDiffuse:
+    enabled: false
+    rpp: 1.000000
+    range: 0.500000
+  AmbientOcclusion:
+    enabled: false
+    rpp: 1.000000
+    range: 0.500000
+  Shadows:
+    enabled: false
+    rpp: 1.000000
+    range: 1.000000

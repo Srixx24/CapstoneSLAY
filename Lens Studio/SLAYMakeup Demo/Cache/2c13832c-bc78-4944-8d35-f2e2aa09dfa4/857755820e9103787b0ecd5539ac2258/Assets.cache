@@ -1,0 +1,17 @@
+- !<AssetCache>
+  AssetFiles:
+    f05b21e1-b678-4527-8fe0-037a30267a04: cc6d039d-46de-4d71-bb5b-af98f584d481/857755820e9103787b0ecd5539ac2258/Data/Pupil.mesh
+  Assets:
+    - !<FileMesh/f05b21e1-b678-4527-8fe0-037a30267a04>
+      PackagePath: ""
+      Info: !<MeshInfo>
+        Triangles: 144
+        Vertices: 142
+        Blendshapes:
+          []
+        Joints: 0
+        AabbSize: {x: 141.511108, y: 141.511108, z: 0.000000}
+  SourceHash: 857755820e9103787b0ecd5539ac2258
+  FileHash: 23ce7de1856f261886ee784fd5d10be3
+  NativePackageItems:
+    []

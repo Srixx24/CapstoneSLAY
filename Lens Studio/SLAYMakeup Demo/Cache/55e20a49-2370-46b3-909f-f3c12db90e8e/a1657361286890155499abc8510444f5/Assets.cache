@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    775cc0a5-0ded-44cd-b2aa-280eeb0d8dfb: 55e20a49-2370-46b3-909f-f3c12db90e8e/a1657361286890155499abc8510444f5/Data/ear_fox.pvr
+  Assets:
+    - !<FileTexture/775cc0a5-0ded-44cd-b2aa-280eeb0d8dfb>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 273
+        Height: 407
+  SourceHash: a1657361286890155499abc8510444f5
+  FileHash: 4a80f8c0bc1ce2e500955608f5f0ed2e
+  NativePackageItems:
+    []

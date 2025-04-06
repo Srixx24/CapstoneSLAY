@@ -1,0 +1,31 @@
+- !<NativePackageDescriptor/8df4f87a-6c9e-47d9-b7a6-c3403d2bfde4>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 8
+    patch: 0
+    build: 25040219
+    type: Unset
+  Description: "2D Lens Frame\n\nParams:\nimageTex"
+  SvgIcon: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg id=\"Layer_2\" data-name=\"Layer 2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 606 606\">\n  <defs>\n    <style>\n      .cls-1 {\n        stroke-width: 0px;\n      }\n\n      .cls-1, .cls-2 {\n        fill: none;\n      }\n\n      .cls-2 {\n        stroke: #6aa8ff;\n        stroke-linejoin: round;\n        stroke-width: 36px;\n      }\n    </style>\n  </defs>\n  <g id=\"Layer_2-2\" data-name=\"Layer 2\">\n    <rect class=\"cls-2\" x=\"65.25\" y=\"65.75\" width=\"475\" height=\"475\" transform=\"translate(606 .5) rotate(90)\"/>\n    <rect class=\"cls-2\" x=\"149.25\" y=\"149.75\" width=\"307\" height=\"307\" transform=\"translate(606 .5) rotate(90)\"/>\n    <line class=\"cls-2\" x1=\"540.75\" y1=\"65.25\" x2=\"456.25\" y2=\"149.75\"/>\n    <line class=\"cls-2\" x1=\"456.25\" y1=\"456.75\" x2=\"540.75\" y2=\"540.25\"/>\n    <line class=\"cls-2\" x1=\"149.25\" y1=\"456.75\" x2=\"65.75\" y2=\"540.25\"/>\n    <line class=\"cls-2\" x1=\"149.25\" y1=\"149.75\" x2=\"64.75\" y2=\"66.25\"/>\n    <rect class=\"cls-1\" width=\"606\" height=\"606\"/>\n  </g>\n</svg>"
+  InternalVersion: 7
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 56
+  ExportUid: 1fe9a703-263c-494c-9151-ce00e508711a
+  ComponentUid: ff10b3e0-f189-4c39-9722-cb508b6e1a55
+  CurrentVisibility: Locked
+  MaxVisibility: Locked
+  Instantiable: !<reference> 019ee82f-11d2-4385-a9ba-96c4b0d0453d
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
+  coreVersion: 305
+  clientVersion: 13.3400002

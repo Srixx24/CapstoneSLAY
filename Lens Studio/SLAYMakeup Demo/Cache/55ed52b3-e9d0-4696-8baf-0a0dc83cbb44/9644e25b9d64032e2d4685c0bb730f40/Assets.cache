@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    c60a8532-907f-4e0c-b507-19f2b3ee1d94: 55ed52b3-e9d0-4696-8baf-0a0dc83cbb44/9644e25b9d64032e2d4685c0bb730f40/Data/extra_whiskers_colored.pvr
+  Assets:
+    - !<FileTexture/c60a8532-907f-4e0c-b507-19f2b3ee1d94>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 148
+        Height: 64
+  SourceHash: 9644e25b9d64032e2d4685c0bb730f40
+  FileHash: b60de993392b259020097f88ed80e476
+  NativePackageItems:
+    []

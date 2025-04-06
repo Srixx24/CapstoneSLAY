@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    ab56108f-9ad4-42e7-97bf-3f2ad463a4df: 27116fed-99fd-4cbb-af31-7d5cc86cce0e/90611f6567e4e16ce996196b5ac8ae16/Data/nose_simple.pvr
+  Assets:
+    - !<FileTexture/ab56108f-9ad4-42e7-97bf-3f2ad463a4df>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 153
+        Height: 90
+  SourceHash: 90611f6567e4e16ce996196b5ac8ae16
+  FileHash: c0a4fb2d645060911fae598533df56e3
+  NativePackageItems:
+    []
