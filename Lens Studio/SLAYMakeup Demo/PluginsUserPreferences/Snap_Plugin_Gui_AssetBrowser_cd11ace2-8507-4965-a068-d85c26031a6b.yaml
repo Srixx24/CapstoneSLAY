@@ -1,0 +1,55 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 49
+    values:
+      - Easy Lens
+      - Easy Lens/LensController.js
+      - Generated Assets
+      - Generated Assets/Eye_Overlay_Sticker.png
+      - Generated Assets/Face Landmarks.lspkg/package.native
+      - Generated Assets/Pin To Face Mesh.lspkg
+      - Generated Assets/Pin To Face Mesh.lspkg/package.native
+      - Generated Assets/Unit Plane
+      - Makeup
+      - Makeup/Makeup/Materials/Blush0.ss_graph
+      - Makeup/Makeup/Materials/Face_0 1
+      - Makeup/Makeup/Materials/Face_0 1/Blush0.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyebrows0.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyelashes0.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyeliner0.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyeshadows0_1.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyeshadows0_2.mat
+      - Makeup/Makeup/Materials/Face_0 1/Eyeshadows0_3.mat
+      - Makeup/Makeup/Materials/Face_0 1/Lips0 2.mat
+      - Makeup/Makeup/Materials/Face_0 1/Lips0.mat
+      - Makeup/Makeup/Scripts/LipsController.js
+      - Makeup/Makeup/Scripts/MakeupController.js
+      - Makeup/Makeup/Textures
+      - Makeup/Makeup/Textures/mask_blush.jpg
+      - Makeup/Makeup/Textures/mask_eyebrows.jpg
+      - Makeup/Makeup/Textures/mask_eyelashes.jpg
+      - Makeup/Makeup/Textures/mask_eyeliner.jpg
+      - Makeup/Makeup/Textures/mask_eyeshadow_1.jpg
+      - Makeup/Makeup/Textures/mask_eyeshadow_2.jpg
+      - Makeup/Makeup/Textures/mask_eyeshadow_3.jpg
+      - Makeup/Makeup/Textures/mask_lip_gloss.jpg
+      - Makeup/Makeup/Textures/mask_lips_closed.jpg
+      - Makeup/Makeup/Textures/mask_lips_opened.jpg
+      - Makeup/SceneHierarchy.prefab
+      - Materials
+      - Materials/Eye Color.mat
+      - Materials/Face Mesh.mat
+      - Materials/ImageMaterial 2.mat
+      - Materials/PBR 2.mat
+      - Materials/PBR.mat
+      - Meshes
+      - Meshes/Disc.mesh
+      - Meshes/Face Mesh.facemesh
+      - Meshes/Sphere.mesh
+      - Shaders
+      - Shaders/face_mesh.ss_graph
+      - Shaders/flat.ss_graph
+      - Textures
+      - Tools/Occlusion Render Target.renderTarget
+  options: 4
