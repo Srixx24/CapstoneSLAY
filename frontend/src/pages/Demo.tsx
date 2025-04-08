@@ -5,17 +5,16 @@ import lipstickShades from "../data/lipstickShades.json";
 function Demo() {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
+  const sendColorToAR = (color: string) => {
+    const iframe = document.getElementById("ar-frame") as HTMLIFrameElement;
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage({ type: "SET_LIP_COLOR", color }, "*");
+    }
+  };
+
   const handleColorClick = (color: string) => {
     setSelectedColor(color);
-
-    // If you want to send to WebXR iframe via postMessage
-    const iframe = document.getElementById("ar-frame") as HTMLIFrameElement;
-    if (iframe?.contentWindow) {
-      iframe.contentWindow.postMessage(
-        { type: "SET_LIP_COLOR", color },
-        "*"
-      );
-    }
+    sendColorToAR(color);
   };
 
   return (
