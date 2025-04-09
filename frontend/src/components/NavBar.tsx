@@ -1,17 +1,16 @@
 // frontend/src/components/Navbar.tsx
 import { Link } from "react-router-dom";
+import Logo from "../../Assets/SLAY_LOGO.png";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-6 py-4 shadow bg-white">
-      <h1 className="text-xl font-bold text-purple-600">SLAY</h1>
-      <div className="space-x-4">
-        <Link to="/" className="text-gray-700 hover:text-purple-600">
-          Home
-        </Link>
-        <Link to="/demo" className="text-gray-700 hover:text-purple-600">
-          Demo
-        </Link>
+    <nav
+      className="flex justify-between items-center px-6 py-4"
+      style={{ backgroundColor: "#000000" }}
+    >
+      {/* Logo */}
+      <div className="flex items-center">
+        <img src={Logo} alt="SLAY Logo" className="h-16 w-auto" />
       </div>
     </nav>
   );

@@ -1,0 +1,17 @@
+
+
+[
+    {
+    "_comment": "Starter code for handling lipstick color that will be fetched from WebXR data. This can be deleted later"
+    },
+
+    { "name": "Cherry Red", "hex": "#b9413e" },
+    { "name": "Crimson", "hex": "#c43337" },
+    { "name": "Firebrick", "hex": "#b62517" },
+    { "name": "Deep Red", "hex": "#9f1a16" },
+    { "name": "Berry", "hex": "#95251b" },
+    { "name": "Mahogany", "hex": "#732824" },
+    { "name": "Wine", "hex": "#882624" },
+    { "name": "Cocoa", "hex": "#62221c" }
+  ]
+  
