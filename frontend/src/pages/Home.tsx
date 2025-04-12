@@ -13,7 +13,8 @@ function Home() {
 
   useEffect(() => {
     const initLens = async () => {
-      const apiToken = "aWYy_Wxv8aNTBsVRbx8SpYjZBdV-S7jPJaaEcHnGrhU";
+      const apiToken =
+        "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzQ0NDM2Mjc4LCJzdWIiOiJhOTM1Mjc4NS04MmQ3LTQ0OGQtOWM2My04NjljNGNjNTM4Yzh-U1RBR0lOR35hNzFkZWJlZC0wMWU5LTQ0MzItYjZlZC04Y2Q3MmVjMGQ3YTQifQ.ZrEe-gg-Wa1Lnl8STpxahlb82zH28VjVRCJQ-nrKr_4";
       const lensGroupId = "73f33df8-9d14-4f03-b133-954a25da0974";
 
       try {
@@ -32,7 +33,7 @@ function Home() {
         const source = createMediaStreamSource(stream, {
           transform: Transform2D.MirrorX,
           cameraType: "user",
-          fpsLimit: 60,
+          fpsLimit: 100,
         });
 
         await session.setSource(source);
