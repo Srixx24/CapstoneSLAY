@@ -1,4 +1,5 @@
 // frontend/src/pages/Home.tsx
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 import {
   bootstrapCameraKit,
@@ -13,7 +14,6 @@ function Home() {
   useEffect(() => {
     const initLens = async () => {
       const apiToken = "aWYy_Wxv8aNTBsVRbx8SpYjZBdV-S7jPJaaEcHnGrhU";
-      const lensId = "a9352785-82d7-448d-9c63-869c4cc538c8";
       const lensGroupId = "d75c8947-a9b8-4799-8705-efa7fe7a8798";
 
       const cameraKit = await bootstrapCameraKit({ apiToken });
@@ -32,8 +32,10 @@ function Home() {
       });
 
       await session.setSource(source);
-      const lens = await cameraKit.lensRepository.loadLens(lensId, lensGroupId);
-      await session.applyLens(lens);
+      const { lenses } = await cameraKit.lensRepository.loadLensGroups([
+        lensGroupId,
+      ]);
+      await session.applyLens(lenses[0]);
       await session.play();
     };
 
@@ -62,7 +64,7 @@ function Home() {
 
   return (
     <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
-      <div className="w-full md:max-w-4xl md:mx-auto -mx-4 md:mx-auto">
+      <div className="w-full md:max-w-4xl md:mx-auto -mx-4">
         <div className="h-[90vh]">
           <canvas ref={canvasRef} className="w-full h-full" />
         </div>
