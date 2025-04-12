@@ -1,8 +1,44 @@
 // frontend/src/pages/Home.tsx
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  bootstrapCameraKit,
+  createMediaStreamSource,
+  Transform2D,
+} from "@snap/camera-kit";
 
 function Home() {
   const [selectedShade, setSelectedShade] = useState<string | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const initLens = async () => {
+      const apiToken = "aWYy_Wxv8aNTBsVRbx8SpYjZBdV-S7jPJaaEcHnGrhU";
+      const lensId = "a9352785-82d7-448d-9c63-869c4cc538c8";
+      const lensGroupId = "d75c8947-a9b8-4799-8705-efa7fe7a8798";
+
+      const cameraKit = await bootstrapCameraKit({ apiToken });
+      const session = await cameraKit.createSession({
+        liveRenderTarget: canvasRef.current!,
+      });
+
+      session.events.addEventListener("error", (event) => {
+        console.error("Lens error:", event.detail.error);
+      });
+
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      const source = createMediaStreamSource(stream, {
+        transform: Transform2D.MirrorX,
+        cameraType: "user",
+      });
+
+      await session.setSource(source);
+      const lens = await cameraKit.lensRepository.loadLens(lensId, lensGroupId);
+      await session.applyLens(lens);
+      await session.play();
+    };
+
+    initLens();
+  }, []);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.currentTarget.style.backgroundColor = "black";
@@ -26,19 +62,11 @@ function Home() {
 
   return (
     <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
-      {/* Iframe + Buttons Container */}
       <div className="w-full md:max-w-4xl md:mx-auto -mx-4 md:mx-auto">
         <div className="h-[90vh]">
-          <iframe
-            src="https://srixx24.github.io/WebXRBusinessCard/"
-            title="SLAY AR Demo"
-            className="w-full h-full"
-            allow="camera; microphone; fullscreen"
-            style={{ border: "none" }}
-          />
+          <canvas ref={canvasRef} className="w-full h-full" />
         </div>
 
-        {/* First Row of Buttons - directly under iframe */}
         <div className="flex w-full">
           {["Scan", "Shade", "Liner", "Save"].map((label, index) => (
             <button
@@ -59,7 +87,6 @@ function Home() {
           ))}
         </div>
 
-        {/* Second Row of Buttons - rounded outer edges */}
         <div className="flex gap-4 w-full mt-4">
           <div className="flex flex-1">
             <button
@@ -124,7 +151,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Lipstick Shade Section - Responsive width */}
       <div className="w-full mt-6 text-center">
         <h2 className="text-white font-semibold text-lg tracking-wide mb-4">
           CHOOSE LIPSTICK SHADE
