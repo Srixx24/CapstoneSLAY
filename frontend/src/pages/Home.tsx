@@ -80,7 +80,7 @@ function Home() {
 
   return (
     <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
-      <div className="w-full md:max-w-4xl md:mx-auto -mx-4 md:mx-auto">
+      <div className="w-full md:max-w-4xl md:mx-auto -mx-4">
         <div className="h-[90vh]">
           <canvas ref={canvasRef} className="w-full h-full" />
         </div>
