@@ -14,29 +14,44 @@ function Home() {
   useEffect(() => {
     const initLens = async () => {
       const apiToken = "aWYy_Wxv8aNTBsVRbx8SpYjZBdV-S7jPJaaEcHnGrhU";
-      const lensGroupId = "d75c8947-a9b8-4799-8705-efa7fe7a8798";
+      const lensGroupId = "73f33df8-9d14-4f03-b133-954a25da0974";
 
-      const cameraKit = await bootstrapCameraKit({ apiToken });
-      const session = await cameraKit.createSession({
-        liveRenderTarget: canvasRef.current!,
-      });
+      try {
+        const cameraKit = await bootstrapCameraKit({ apiToken });
+        const session = await cameraKit.createSession({
+          liveRenderTarget: canvasRef.current!,
+        });
 
-      session.events.addEventListener("error", (event) => {
-        console.error("Lens error:", event.detail.error);
-      });
+        session.events.addEventListener("error", (event) => {
+          console.error("Lens error:", event.detail.error);
+        });
 
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      const source = createMediaStreamSource(stream, {
-        transform: Transform2D.MirrorX,
-        cameraType: "user",
-      });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+        });
+        const source = createMediaStreamSource(stream, {
+          transform: Transform2D.MirrorX,
+          cameraType: "user",
+          fpsLimit: 60,
+        });
 
-      await session.setSource(source);
-      const { lenses } = await cameraKit.lensRepository.loadLensGroups([
-        lensGroupId,
-      ]);
-      await session.applyLens(lenses[0]);
-      await session.play();
+        await session.setSource(source);
+        await source.setRenderSize(640, 480);
+
+        const { lenses } = await cameraKit.lensRepository.loadLensGroups([
+          lensGroupId,
+        ]);
+        if (!lenses.length) throw new Error("No lenses found in group.");
+        await session.applyLens(lenses[0]);
+
+        await session.play();
+        console.log("Lens rendering started.");
+      } catch (err) {
+        console.error("Failed to initialize AR lens:", err);
+        alert(
+          "Unable to load AR experience. Please check your camera permissions and try again."
+        );
+      }
     };
 
     initLens();
@@ -64,7 +79,7 @@ function Home() {
 
   return (
     <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
-      <div className="w-full md:max-w-4xl md:mx-auto -mx-4">
+      <div className="w-full md:max-w-4xl md:mx-auto -mx-4 md:mx-auto">
         <div className="h-[90vh]">
           <canvas ref={canvasRef} className="w-full h-full" />
         </div>
