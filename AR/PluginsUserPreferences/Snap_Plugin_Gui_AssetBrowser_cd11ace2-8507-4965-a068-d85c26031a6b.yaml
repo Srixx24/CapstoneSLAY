@@ -1,0 +1,36 @@
+CollapsedEntities:
+  type: stringset
+  value:
+    size: 30
+    values:
+      - Materials
+      - Materials/Blush0.mat
+      - Materials/Blush0.ss_graph
+      - Materials/Eyebrows0.mat
+      - Materials/Eyelashes0.mat
+      - Materials/Eyeliner0.mat
+      - Materials/Eyeshadows0_1.mat
+      - Materials/Eyeshadows0_2.mat
+      - Materials/Eyeshadows0_3.mat
+      - Materials/Lipgloss0.mat
+      - Materials/Lips0.mat
+      - Other Resources
+      - Other Resources/package.native
+      - Render Targets
+      - Render Targets/Occlusion Render Target.renderTarget
+      - Scripts
+      - Scripts/Facial Features Segmentation.lsc
+      - Scripts/LipsController.js
+      - Scripts/MakeupController.js
+      - Textures
+      - Textures/mask_blush.jpg
+      - Textures/mask_eyebrows.jpg
+      - Textures/mask_eyelashes.jpg
+      - Textures/mask_eyeliner.jpg
+      - Textures/mask_eyeshadow_1.jpg
+      - Textures/mask_eyeshadow_2.jpg
+      - Textures/mask_eyeshadow_3.jpg
+      - Textures/mask_lip_gloss.jpg
+      - Textures/mask_lips_closed.jpg
+      - Textures/mask_lips_opened.jpg
+  options: 4
