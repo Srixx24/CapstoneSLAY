@@ -37,7 +37,7 @@ function Home() {
         });
 
         await session.setSource(source);
-        await source.setRenderSize(640, 480);
+        await source.setRenderSize(1280, 720);
 
         const { lenses } = await cameraKit.lensRepository.loadLensGroups([
           lensGroupId,
