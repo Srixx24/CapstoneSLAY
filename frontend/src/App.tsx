@@ -1,13 +1,13 @@
 // frontend/src/App.tsx
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
 
 function App() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/demo" element={<Demo />} />
