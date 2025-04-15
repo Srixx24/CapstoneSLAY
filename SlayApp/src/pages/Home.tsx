@@ -1,4 +1,4 @@
-// frontend/src/pages/Home.tsx
+// SlayApp/src/pages/Home.tsx
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -78,94 +78,26 @@ function Home() {
     e.currentTarget.style.color = "black";
   };
 
+  const handleRescan = () => {
+    console.log("Rescan triggered - connect to ML backend");
+  };
+
+  const lipstickShades = [
+    "#580F41", // Rich Plum
+    "#5E0909", // Deep Red
+    "#9F1C69", // Berry Fuchsia
+    "#4B2E2B", // Chocolate Brown
+    "#87412F", // Light Brown Terracotta
+    "#C48189", // Dusty Rose
+    "#C21807", // Classic Cherry Red
+    "#CC5247", // Soft Pink Nude
+  ];
+
   return (
     <div className="w-full min-h-screen p-4 flex flex-col items-center bg-black">
       <div className="w-full md:max-w-4xl md:mx-auto -mx-4">
         <div className="h-[90vh]">
           <canvas ref={canvasRef} className="w-full h-full" />
-        </div>
-
-        <div className="flex w-full">
-          {["Scan", "Shade", "Liner", "Save"].map((label, index) => (
-            <button
-              key={index}
-              className="flex-1 py-2 rounded-none font-semibold transition-colors duration-200"
-              style={{
-                backgroundColor: "#e3e0d1",
-                color: "black",
-                border: "none",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex gap-4 w-full mt-4">
-          <div className="flex flex-1">
-            <button
-              className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-full"
-              style={{
-                backgroundColor: "#e3e0d1",
-                color: "black",
-                border: "1px solid #e3e0d1",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-            >
-              Gloss
-            </button>
-            <button
-              className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-full"
-              style={{
-                backgroundColor: "#e3e0d1",
-                color: "black",
-                border: "1px solid #e3e0d1",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-            >
-              Matte
-            </button>
-          </div>
-          <div className="flex flex-1">
-            <button
-              className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-l-full"
-              style={{
-                backgroundColor: "#e3e0d1",
-                color: "black",
-                border: "1px solid #e3e0d1",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-            >
-              Opacity
-            </button>
-            <button
-              className="flex-1 py-2 font-semibold transition-colors duration-200 rounded-r-full"
-              style={{
-                backgroundColor: "#e3e0d1",
-                color: "black",
-                border: "1px solid #e3e0d1",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-            >
-              Full
-            </button>
-          </div>
         </div>
       </div>
 
@@ -174,26 +106,25 @@ function Home() {
           CHOOSE LIPSTICK SHADE
         </h2>
         <div className="grid grid-cols-4 gap-4 place-items-center w-full md:max-w-md md:mx-auto">
-          {[
-            "#b9413e",
-            "#c43337",
-            "#b62517",
-            "#9f1a16",
-            "#95251b",
-            "#732824",
-            "#882624",
-            "#62221c",
-          ].map((color, index) => (
+          {lipstickShades.map((color, index) => (
             <button
               key={index}
               onClick={() => setSelectedShade(color)}
               className={`w-20 h-20 rounded-full focus:outline-none transition-shadow duration-200 ${
-                selectedShade === color ? "ring-4 ring-white shadow-lg" : ""
+                selectedShade === color ? "ring-4 ring-white shadow-[0_0_10px_4px_white]" : ""
               }`}
               style={{ backgroundColor: color }}
             />
           ))}
         </div>
+
+        <button
+          onClick={handleRescan}
+          className="mt-6 px-6 py-2 font-semibold rounded-full border"
+          style={{ backgroundColor: "#f5f0e6", color: "black" }}
+        >
+          Rescan
+        </button>
       </div>
     </div>
   );
