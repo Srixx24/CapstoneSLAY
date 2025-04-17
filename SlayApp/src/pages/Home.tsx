@@ -1,6 +1,5 @@
 // SlayApp/src/pages/Home.tsx
-import React from "react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   bootstrapCameraKit,
   createMediaStreamSource,
@@ -8,14 +7,16 @@ import {
 } from "@snap/camera-kit";
 
 function Home() {
-  // Track selected lipstick color
-  const [selectedShade, setSelectedShade] = useState<string | null>(null);
-  // Reference to the AR canvas
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  // === STATE ===
+  const [selectedShade, setSelectedShade] = useState<string | null>(null); // Currently selected lipstick shade
+  const [lensSession, setLensSession] = useState<any>(null); // Holds the Snap lens session
+  const [isLensReady, setIsLensReady] = useState(false); // Tracks if lens is fully initialized
+
+  // === REFS ===
+  const canvasRef = useRef<HTMLCanvasElement>(null); // Snap AR rendering canvas
 
   useEffect(() => {
     const initLens = async () => {
-      // Snap API credentials
       const apiToken =
         "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzQ0NDM2Mjc4LCJzdWIiOiJhOTM1Mjc4NS04MmQ3LTQ0OGQtOWM2My04NjljNGNjNTM4Yzh-U1RBR0lOR35hNzFkZWJlZC0wMWU5LTQ0MzItYjZlZC04Y2Q3MmVjMGQ3YTQifQ.ZrEe-gg-Wa1Lnl8STpxahlb82zH28VjVRCJQ-nrKr_4";
       const lensGroupId = "73f33df8-9d14-4f03-b133-954a25da0974";
@@ -30,13 +31,20 @@ function Home() {
           console.error("Lens error:", event.detail.error);
         });
 
+        // Get the camera stream
         const stream = await navigator.mediaDevices.getUserMedia({
           video: true,
         });
 
-        const width = 1280;
-        const height = 720;
-        const fpsLimit = 100;
+        // Device-based resolution/fps configuration
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        const isOldMac =
+          /Macintosh/.test(navigator.userAgent) &&
+          !window.MediaStreamTrack?.prototype?.getSettings;
+
+        const width = isOldMac || isMobile ? 640 : 1280;
+        const height = isOldMac || isMobile ? 480 : 720;
+        const fpsLimit = isOldMac ? 30 : isMobile ? 60 : 100;
 
         const source = createMediaStreamSource(stream, {
           transform: Transform2D.MirrorX,
@@ -54,43 +62,62 @@ function Home() {
         await session.applyLens(lenses[0]);
         await session.play();
 
+        // Make lens session globally available to call custom functions
         (window as any).lensSession = session;
       } catch (err) {
-        console.error("Failed to initialize AR lens:", err);
-        alert(
-          "Unable to load AR experience. Please check your camera permissions and try again."
-        );
+        console.error("❌ Failed to initialize AR lens:", err);
+        alert("Unable to load AR experience. Please check your camera permissions.");
       }
     };
 
     initLens();
   }, []);
 
+  // Convert HEX to normalized RGB (0-1 values)
+  const hexToRgb = (hex: string) => {
+    const bigint = parseInt(hex.replace("#", ""), 16);
+    return {
+      r: ((bigint >> 16) & 255) / 255,
+      g: ((bigint >> 8) & 255) / 255,
+      b: (bigint & 255) / 255,
+    };
+  };
+
   // Set the lipstick color on both UI and lens
-  const handleColorSelect = (rgb: { r: number; g: number; b: number }) => {
+  const handleColorSelect = (hexColor: string) => {
+    setSelectedShade(hexColor);
+    const rgb = hexToRgb(hexColor);
     if ((window as any).lensSession?.call) {
       (window as any).lensSession.call("setLipColor", rgb);
     }
   };
 
+  // Trigger ML backend rescan (to be wired in)
+  const handleRescan = () => {
+    console.log("Rescan triggered - connect to ML backend");
+  };
+
+  // ML-recommended shades
   const lipstickShades = [
-    { name: "Rich Plum", color: { r: 0.345, g: 0.059, b: 0.255 } },
-    { name: "Deep Red", color: { r: 0.368, g: 0.035, b: 0.035 } },
-    { name: "Berry Fuchsia", color: { r: 0.624, g: 0.11, b: 0.412 } },
-    { name: "Chocolate Brown", color: { r: 0.294, g: 0.18, b: 0.169 } },
-    { name: "Terracotta", color: { r: 0.529, g: 0.255, b: 0.184 } },
-    { name: "Dusty Rose", color: { r: 0.769, g: 0.506, b: 0.537 } },
-    { name: "Cherry Red", color: { r: 0.761, g: 0.094, b: 0.027 } },
-    { name: "Soft Pink Nude", color: { r: 0.8, g: 0.32, b: 0.72 } },
+    "#580F41", // Rich Plum
+    "#5E0909", // Deep Red
+    "#9F1C69", // Berry Fuchsia
+    "#4B2E2B", // Chocolate Brown
+    "#87412F", // Light Brown Terracotta
+    "#C48189", // Dusty Rose
+    "#C21807", // Classic Cherry Red
+    "#CC5247", // Soft Pink Nude
   ];
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-black relative">
       <div className="w-full max-w-4xl md:mx-auto pt-4 px-4">
+        {/* AR canvas */}
         <div className="h-[90vh] pt-10">
           <canvas ref={canvasRef} className="w-full h-full object-cover" />
         </div>
 
+        {/* Lipstick selection buttons */}
         <div className="w-full mt-6 text-center z-10">
           <h2 className="text-white font-semibold text-lg tracking-wide mb-4">
             CHOOSE LIPSTICK SHADE
