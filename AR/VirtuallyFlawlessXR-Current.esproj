@@ -1,0 +1,43 @@
+studioVersion:
+  major: 5
+  minor: 7
+  patch: 2
+  build: 25030805
+  type: Public
+coreVersion: 301
+clientVersion: 13.300000
+updateCheckpoint: 55
+sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
+viewConfig:
+  simulation:
+    device: No Simulation
+    cameraFov: 66.519997
+    fullFrameAspect: nan
+    resolutionScale: 1.000000
+    viewport: Maximized
+    output: Live
+    stereoOutputEye: Center
+    deviceTypeOverride: Unknown
+  cameraType: Front
+metaInfo:
+  hints:
+    []
+  tags:
+    []
+  lensName: SLAY XR
+  lensDescriptors:
+    - GEN_AI_ICON
+  lensApplicability:
+    - Front
+    - Back
+  lensClientCompatibilities:
+    - Mobile
+    - Web
+    - CameraKit
+  platformBundlesEnabled: false
+  iconHash: f6da1ba943213aa759fb3b156b87795d
+  videoPreviewHash: 8a8c8f6525c7482c3072b2e07e3a737a
+  fromTemplateName: Camera Kit
+  fromTemplateUrl: Lens Studio 5.7.2.25030805
+  activationCamera: Front
+  sourceMapEnabled: false

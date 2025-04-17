@@ -1,0 +1,23 @@
+- !<AssetImportMetadata/b508c8c2-a45f-4613-811d-b76b7165dca0>
+  ImportedAssetIds:
+    .hidden/FaceMat: !<reference> e387d9af-daa2-42d7-9193-52617efc2f22
+    DestructionHelper: !<reference> 5396ddae-aec3-4f51-af42-937222d675fc
+    Face Crop Texture 0: !<reference> c648e718-9337-40e1-95e1-5f55a8adf9f4
+    Face Crop Texture 1: !<reference> 6f01c76f-ae85-4289-98a6-d2b54c436710
+    FaceMat: !<reference> 574b73b7-d9c3-41f7-919e-365da69c1d7b
+    FaceMat|FaceMat|GraphPassInfo: !<reference> f74ff0e7-dc86-446f-bddf-250f9236e753
+    Facial Features Segmentation/Facial Features Segmentation: !<reference> 2bb8068c-f597-4c91-bcc9-b520bc046684
+    LENSCORE_SEGMENTATION_FACEPARSING: !<reference> c76d2e15-b02b-464c-949e-f1cf4935ddd2
+  ImporterName: LensCoreImporter
+  PrimaryAsset: !<reference> 2bb8068c-f597-4c91-bcc9-b520bc046684
+  PackageType: LegacyPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<LensCoreImporterSettings>
+    PersistentIdGenerationAlgorithm: DescriptorBased
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
