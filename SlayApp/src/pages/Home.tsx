@@ -31,12 +31,8 @@ function Home() {
           console.error("Lens error:", event.detail.error);
         });
 
-        // Get the camera stream
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: true,
-        });
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
 
-        // Device-based resolution/fps configuration
         const isMobile = /Mobi|Android/i.test(navigator.userAgent);
         const isOldMac =
           /Macintosh/.test(navigator.userAgent) &&
@@ -62,8 +58,9 @@ function Home() {
         await session.applyLens(lenses[0]);
         await session.play();
 
-        // Make lens session globally available to call custom functions
-        (window as any).lensSession = session;
+        setLensSession(session); // Store session
+        setIsLensReady(true);    // ✅ Mark as ready
+        console.log("✅ Lens initialized");
       } catch (err) {
         console.error("❌ Failed to initialize AR lens:", err);
         alert("Unable to load AR experience. Please check your camera permissions.");
@@ -73,7 +70,7 @@ function Home() {
     initLens();
   }, []);
 
-  // Convert HEX to normalized RGB (0-1 values)
+  // Convert HEX → normalized RGB (0–1)
   const hexToRgb = (hex: string) => {
     const bigint = parseInt(hex.replace("#", ""), 16);
     return {
@@ -83,64 +80,54 @@ function Home() {
     };
   };
 
-  // Set the lipstick color on both UI and lens
+  // Handle lipstick color selection
   const handleColorSelect = (hexColor: string) => {
+    console.log("🎨 Button clicked:", hexColor);
     setSelectedShade(hexColor);
     const rgb = hexToRgb(hexColor);
-    if ((window as any).lensSession?.call) {
-      (window as any).lensSession.call("setLipColor", rgb);
+
+    if (isLensReady && lensSession?.call) {
+      lensSession.call("setLipColor", rgb); // Remote Lens API function
+      console.log("✅ Sent color to lens:", rgb);
+    } else {
+      console.warn("❌ Lens session not ready.");
     }
   };
 
-  // Trigger ML backend rescan (to be wired in)
+  // Placeholder for ML logic
   const handleRescan = () => {
-    console.log("Rescan triggered - connect to ML backend");
+    console.log("Rescan triggered – ML logic goes here.");
   };
 
-  // ML-recommended shades
   const lipstickShades = [
-    "#580F41", // Rich Plum
-    "#5E0909", // Deep Red
-    "#9F1C69", // Berry Fuchsia
-    "#4B2E2B", // Chocolate Brown
-    "#87412F", // Light Brown Terracotta
-    "#C48189", // Dusty Rose
-    "#C21807", // Classic Cherry Red
-    "#CC5247", // Soft Pink Nude
+    "#580F41", "#5E0909", "#9F1C69", "#4B2E2B",
+    "#87412F", "#C48189", "#C21807", "#CC5247",
   ];
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-black relative">
       <div className="w-full max-w-4xl md:mx-auto pt-4 px-4">
-        {/* AR canvas */}
+        {/* Snap Lens AR canvas */}
         <div className="h-[90vh] pt-10">
           <canvas ref={canvasRef} className="w-full h-full object-cover" />
         </div>
 
-        {/* Lipstick selection buttons */}
+        {/* Lipstick color buttons */}
         <div className="w-full mt-6 text-center z-10">
           <h2 className="text-white font-semibold text-lg tracking-wide mb-4">
             CHOOSE LIPSTICK SHADE
           </h2>
           <div className="grid grid-cols-4 gap-4 place-items-center w-full md:max-w-md md:mx-auto">
-            {lipstickShades.map(({ name, color }, index) => (
+            {lipstickShades.map((color, index) => (
               <button
                 key={index}
-                onClick={() => {
-                  handleColorSelect(color);
-                  setSelectedShade(name);
-                }}
+                onClick={() => handleColorSelect(color)}
                 className={`w-20 h-20 rounded-full focus:outline-none transition-shadow duration-200 ${
-                  selectedShade === name
+                  selectedShade === color
                     ? "ring-4 ring-white shadow-[0_0_10px_4px_white]"
                     : ""
                 }`}
-                style={{
-                  backgroundColor: `rgba(${color.r * 255}, ${color.g * 255}, ${
-                    color.b * 255
-                  }, 1)`,
-                }}
-                title={name}
+                style={{ backgroundColor: color }}
               />
             ))}
           </div>
