@@ -7,13 +7,11 @@ import {
 } from "@snap/camera-kit";
 
 function Home() {
-  // === STATE ===
-  const [selectedShade, setSelectedShade] = useState<string | null>(null); // Currently selected lipstick shade
-  const [lensSession, setLensSession] = useState<any>(null); // Holds the Snap lens session
-  const [isLensReady, setIsLensReady] = useState(false); // Tracks if lens is fully initialized
+  const [selectedShade, setSelectedShade] = useState<string | null>(null);
+  const [lensSession, setLensSession] = useState<any>(null);
+  const [isLensReady, setIsLensReady] = useState(false);
 
-  // === REFS ===
-  const canvasRef = useRef<HTMLCanvasElement>(null); // Snap AR rendering canvas
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const initLens = async () => {
@@ -31,16 +29,13 @@ function Home() {
           console.error("Lens error:", event.detail.error);
         });
 
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+        });
 
-        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-        const isOldMac =
-          /Macintosh/.test(navigator.userAgent) &&
-          !window.MediaStreamTrack?.prototype?.getSettings;
-
-        const width = isOldMac || isMobile ? 640 : 1280;
-        const height = isOldMac || isMobile ? 480 : 720;
-        const fpsLimit = isOldMac ? 30 : isMobile ? 60 : 100;
+        const width = 1280;
+        const height = 720;
+        const fpsLimit = 100;
 
         const source = createMediaStreamSource(stream, {
           transform: Transform2D.MirrorX,
@@ -58,76 +53,71 @@ function Home() {
         await session.applyLens(lenses[0]);
         await session.play();
 
-        setLensSession(session); // Store session
-        setIsLensReady(true);    // ✅ Mark as ready
+        setLensSession(session);
+        setIsLensReady(true);
         console.log("✅ Lens initialized");
       } catch (err) {
         console.error("❌ Failed to initialize AR lens:", err);
-        alert("Unable to load AR experience. Please check your camera permissions.");
+        alert(
+          "Unable to load AR experience. Please check your camera permissions."
+        );
       }
     };
 
     initLens();
   }, []);
 
-  // Convert HEX → normalized RGB (0–1)
-  const hexToRgb = (hex: string) => {
-    const bigint = parseInt(hex.replace("#", ""), 16);
-    return {
-      r: ((bigint >> 16) & 255) / 255,
-      g: ((bigint >> 8) & 255) / 255,
-      b: (bigint & 255) / 255,
-    };
-  };
-
-  // Handle lipstick color selection
-  const handleColorSelect = (hexColor: string) => {
-    console.log("🎨 Button clicked:", hexColor);
-    setSelectedShade(hexColor);
-    const rgb = hexToRgb(hexColor);
-
+  const handleColorSelect = (
+    shadeName: string,
+    rgb: { r: number; g: number; b: number }
+  ) => {
+    setSelectedShade(shadeName);
     if (isLensReady && lensSession?.call) {
-      lensSession.call("setLipColor", rgb); // Remote Lens API function
+      lensSession.call("setLipColor", rgb);
       console.log("✅ Sent color to lens:", rgb);
     } else {
       console.warn("❌ Lens session not ready.");
     }
   };
 
-  // Placeholder for ML logic
-  const handleRescan = () => {
-    console.log("Rescan triggered – ML logic goes here.");
-  };
-
   const lipstickShades = [
-    "#580F41", "#5E0909", "#9F1C69", "#4B2E2B",
-    "#87412F", "#C48189", "#C21807", "#CC5247",
+    { name: "Rich Plum", color: { r: 0.345, g: 0.059, b: 0.255 } },
+    { name: "Deep Red", color: { r: 0.368, g: 0.035, b: 0.035 } },
+    { name: "Berry Fuchsia", color: { r: 0.624, g: 0.11, b: 0.412 } },
+    { name: "Chocolate Brown", color: { r: 0.294, g: 0.18, b: 0.169 } },
+    { name: "Terracotta", color: { r: 0.529, g: 0.255, b: 0.184 } },
+    { name: "Dusty Rose", color: { r: 0.769, g: 0.506, b: 0.537 } },
+    { name: "Cherry Red", color: { r: 0.761, g: 0.094, b: 0.027 } },
+    { name: "Soft Pink Nude", color: { r: 0.8, g: 0.32, b: 0.72 } },
   ];
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-black relative">
       <div className="w-full max-w-4xl md:mx-auto pt-4 px-4">
-        {/* Snap Lens AR canvas */}
         <div className="h-[90vh] pt-10">
           <canvas ref={canvasRef} className="w-full h-full object-cover" />
         </div>
 
-        {/* Lipstick color buttons */}
         <div className="w-full mt-6 text-center z-10">
           <h2 className="text-white font-semibold text-lg tracking-wide mb-4">
             CHOOSE LIPSTICK SHADE
           </h2>
           <div className="grid grid-cols-4 gap-4 place-items-center w-full md:max-w-md md:mx-auto">
-            {lipstickShades.map((color, index) => (
+            {lipstickShades.map(({ name, color }, index) => (
               <button
                 key={index}
-                onClick={() => handleColorSelect(color)}
+                onClick={() => handleColorSelect(name, color)}
                 className={`w-20 h-20 rounded-full focus:outline-none transition-shadow duration-200 ${
-                  selectedShade === color
+                  selectedShade === name
                     ? "ring-4 ring-white shadow-[0_0_10px_4px_white]"
                     : ""
                 }`}
-                style={{ backgroundColor: color }}
+                style={{
+                  backgroundColor: `rgba(${color.r * 255}, ${color.g * 255}, ${
+                    color.b * 255
+                  }, 1)`,
+                }}
+                title={name}
               />
             ))}
           </div>
